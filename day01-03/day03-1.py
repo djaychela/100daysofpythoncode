@@ -1,11 +1,11 @@
 from datetime import datetime, timedelta
 import pygame
 
-work_timer = 10
+work_timer = 25
 rest_timer = 5
-cycles = 2
-work_delta = timedelta(seconds=work_timer)
-rest_delta = timedelta(seconds=rest_timer)
+cycles = 4
+work_delta = timedelta(minutes=work_timer)
+rest_delta = timedelta(minutes=rest_timer)
 
 
 def print_header(message):
@@ -40,6 +40,7 @@ def start_timer(mode):
         timer(start_time + work_delta)
     else:
         timer(start_time + rest_delta)
+
 
 def main():
     pygame.mixer.init()
