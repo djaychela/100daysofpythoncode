@@ -4,6 +4,7 @@ csv_url = "https://raw.githubusercontent.com/sundeepblue/movie_rating_prediction
 min_films = 4
 year_cutoff = 1960
 
+
 def get_and_clean_data(url):
     df = pd.read_csv(csv_url)
     all_columns = list(df.columns)

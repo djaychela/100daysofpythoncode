@@ -62,6 +62,7 @@ def calculate_directors_score(director, director_dict):
         director_score = director_score / total_films
     return director_score
 
+
 def calculate_directors_scores(director_dict):
     directors_scores = {}
     for director in director_dict.keys():
@@ -71,6 +72,7 @@ def calculate_directors_scores(director_dict):
     directors_scores_sorted = sorted(directors_scores, key=directors_scores.get, reverse=True)
     return directors_scores_sorted
 
+
 def main():
     csv_list = download_director_csv()
     csv_list = filter_director_data(csv_list)
@@ -78,6 +80,7 @@ def main():
     directors_scores_sorted = calculate_directors_scores(directors)
     for order in directors_scores_sorted[:20]:
         print_directors_films(order, directors)
+
 
 if __name__ == '__main__':
     main()

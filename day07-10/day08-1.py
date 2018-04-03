@@ -12,7 +12,6 @@ def get_all_jeeps():
     return ', '.join(cars['Jeep'])
 
 
-
 def get_first_model_each_manufacturer():
     """return a list of matching models (original ordering)"""
     first_models = []
@@ -41,6 +40,7 @@ def sort_car_models():
         model_list.sort()
         cars[maker]=model_list
     return cars
+
 
 # print(get_all_jeeps())
 # print(get_first_model_each_manufacturer())
