@@ -8,13 +8,13 @@ class Player():
         self.score = 0
 
     def generate_roll(self):
-        roll_choices = ['rock','paper','scissors']
+        roll_choices = ['rock', 'paper', 'scissors']
         self.roll = random.choice(roll_choices)
         print(f'{self.name} rolls {self.roll.capitalize()}')
         return self.roll
 
     def input_roll(self):
-        roll_dict = {'r':'rock', 'p':'paper', 's':'scissors'}
+        roll_dict = {'r': 'rock', 'p': 'paper', 's': 'scissors'}
         roll_choice = None
         while not roll_choice:
             roll = input(f'{self.name} - Enter Roll = [r]ock, [p]aper, [s]cissors: ')
@@ -35,9 +35,7 @@ class Player():
             return 'lose'
 
     def score_increase(self):
-        self.score +=1
-
-
+        self.score += 1
 
 
 def print_header():
@@ -70,7 +68,7 @@ def main():
         print(f"Current scores: {player_1.name}: {player_1.score} - {player_2.name}: {player_2.score}")
         count += 1
         if count == 4 and player_1.score == player_2.score:
-            count -=1
+            count -= 1
     print(f"Final score: {player_1.name}: {player_1.score} - {player_2.name}: {player_2.score}")
 
 
