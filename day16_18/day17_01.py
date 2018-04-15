@@ -13,6 +13,7 @@ def pairs_gen():
         output = name_1 + ' teams up with ' + name_2
         yield output
 
+
 names_title = [name.title() for name in NAMES]
 print(names_title)
 names_reverse = [' '.join(name.title().split()[::-1]) for name in NAMES]
